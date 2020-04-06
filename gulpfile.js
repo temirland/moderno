@@ -8,7 +8,7 @@ let gulp = require('gulp'),
     cssmin = require('gulp-cssmin')
 
 gulp.task('sass', function(){      // Здесь 'sass' - это имя задания. Вызваем это задание втерминале как (gulp sass)
-    return gulp.src('app/scss/style.scss')     // Ищем файл с которым нужно что то сделать
+    return gulp.src('app/scss/**/*.scss')     // Ищем файл с которым нужно что то сделать
             .pipe(sass({outputStyle: 'compressed'}))    // преобразовывается в css (sass() - это тот который мы указали через let (который gulp-sass))
                                                         // можно и другие "станции" подрубать по пути
             .pipe(rename({suffix: '.min'}))             // переименовываем файл (добавляем суффикс '.min')
@@ -68,7 +68,7 @@ gulp.task('browserSync', function() {
 
 
 gulp.task('watch', function(){
-    gulp.watch('app/scss/style.scss', gulp.parallel('sass'));   // Метод watch() следит за файлом и
+    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));   // Метод watch() следит за файлом и
                                                                   // если изменится файл (style.min.css), то запустится таск 'sass'
     gulp.watch('app/*.html', gulp.parallel('html')); 
     gulp.watch('app/js/*.js', gulp.parallel('js')); 
