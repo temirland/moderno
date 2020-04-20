@@ -5,7 +5,9 @@
 
 // Start HEADER
 
-
+.header{
+    background-color: #fff;
+}
 .header__top-inner{
     display: flex;
     justify-content: space-between;
@@ -104,6 +106,7 @@
     }
 }
 .basket{
+    margin-right: 20px;
     span{
         background-color: $green;
     }
@@ -118,7 +121,6 @@
     }
 }
 .user{
-    margin-left: 20px;
     margin-right: 25px;
     padding-right: 20px;
     position: relative;
@@ -198,6 +200,7 @@
     right: 0;
     height: 0;
     overflow: hidden;
+    z-index: 1;
     // transition: all .3s;
 }
 .basket__box,
@@ -307,6 +310,13 @@
 .icons__color::before{
     color: $tomato;
 }
+
+.header__btn-menu,
+.menu__btn{
+    display: none;
+}
+
+
 
 // End HEADER
 
@@ -1216,3 +1226,9 @@ button.icon-unsorted{
 
 
 // end product-page
+
+
+
+
+
+@import '_media';
