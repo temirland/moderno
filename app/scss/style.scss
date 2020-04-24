@@ -323,6 +323,7 @@
 // Start MODAL
 
 #modal{
+    display: none;
     background-color: $green;
     max-width: 730px;
     width: 100%;
@@ -369,6 +370,7 @@
         color: #fff;
         font-size: 14px;
         padding-left: 40px;
+        padding-right: 8px;
         display: block;
         width: 100%;
         &::placeholder{
@@ -1961,6 +1963,201 @@ button.icon-unsorted{
         color: #707070;
     }
 }
+
+// end Settings
+
+
+// Start Profile
+.profile__inner{
+    display: flex;
+    margin-bottom: 30px;
+}
+.profile__aside{
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+    & .footer__social-link{
+        margin-bottom: 30px;
+    }
+}
+.profile__content{
+    width: 100%;
+}
+
+.profile-status{
+    color: #707070;
+    font-size: 13px;
+    padding: 3px 9px 2px 30px;
+    border: 1px solid #d6d6d6;
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        left: 12px;
+        top: 10px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+    }
+}
+.profile-on{
+    &::before{
+        background-color: $green;
+    }
+}
+.profile-off{
+    &::before{
+        background-color: $red;
+    }
+}
+
+.profile__aside-btn{
+    margin-bottom: 13px;
+    text-align: center;
+}
+.profile__aside-message{
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    @include f500;
+    background-color: $text;
+    padding: 18px 10px;
+    position: relative;
+    box-shadow: 0 1px 2px 0 rgba(69, 90, 100, 0.75);
+    &::before{
+        content: "\f003";
+        font-family: 'icomoon';
+        position: absolute;
+        font-size: 16px;
+        left: 50px;
+        top: 17px;
+    }
+
+}
+.profile__aside-following{
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    @include f700;
+    background-color: $green;
+    padding: 18px 10px;
+
+}
+.profile__banner{
+    padding: 20px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+    margin-bottom: 35px;
+}
+.profile__banner-image{
+    background-image: url(../images/content/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 332px;
+}
+.profile__items{
+    display: flex;
+    border: 1px solid #dedede;
+}
+.profile__item{
+    width: 25%;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 5px 17px;
+    & + .profile__item{
+        border-left: 1px solid #dedede;
+    }
+}
+.profile__item-title{
+    font-size: 14px;
+    color: $bg;
+    @include f500;
+
+}
+.profile__item-content{
+    color: #707070;
+    font-size: 14px;
+    @include f500;
+    &.profile__item-sales{
+        color: $bg;
+    }
+}
+
+.profile-settings{
+    .product-one__tabs.settings__tabs{
+        .tabs span{
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 500;
+            color: #707070;
+            position: relative;
+            &.active::before{
+                color: $green;
+            }
+            &::before{
+                position: absolute;
+                left: 27px;
+                top: 15px;
+                font-size: 14px;
+                font-family: 'icomoon';
+                color: #d0d0d0;
+            }
+        }
+    } 
+}
+.presonal-box{
+    background-color: #fff;
+    padding: 35px 40px 25px;
+    border: 1px solid #dedede;
+}
+.presonal-box__title{
+    margin-bottom: 25px;
+    @include f500;
+    color: $bg;
+    font-size: 20px;
+}
+.presonal-box-text{
+    margin-bottom: 20px;
+    p{
+        margin-bottom: 40px;
+        color: #707070;
+    }
+}
+.presonal-box__item-head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.presonal-box__item-name{
+    @include f500;
+    font-size: 16px;
+    color: $bg;
+    font-style: italic;
+}
+.presonal-box__item-number{
+    @include f700;
+    font-size: 16px;
+    color: $bg;
+}
+.presonal-box__item-line{
+    height: 15px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    margin-bottom: 23px;
+    span{
+        display: block;
+        height: 15px;
+        border-radius: 3px;
+        background-image: url(../images/pro-bar.jpg);
+        background-repeat: repeat;
+    }
+}
+
+
 
 
 
